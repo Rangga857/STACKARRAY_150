@@ -11,16 +11,19 @@ public :
 	stackarray() {
 		top = -1;
 	}
-	string push(string element) {
+	void push() {
 		if (top == 4) {//step 1
+
 			cout << "Number of data execeeds the limit." << endl;
-			return "";
+			return;
+
 		}
+		cout << "\nEnter a element: ";
+		string element;
+		getline(cin, element);
 		top++; //step 2
 		stack_array[top] = element; //step 3
 		cout << element << "ditambahkan(pushed)" << endl;
-
-		return element;
 	}
 	void pop() {
 		if (empty()) { // step 1
@@ -52,7 +55,7 @@ int main() {
 	stackarray s;
 	while (true) {
 		cout << endl;
-		cout << "\n***stack menu ***\n";
+		cout << "\n***stack menu***\n";
 		cout << "1. Push\n";
 		cout << "2. Pop\n";
 		cout << "3. Display\n";
@@ -63,10 +66,7 @@ int main() {
 		char ch = (input.empty() ? '0' : input[0]);
 		switch (ch) {
 		case '1': {
-			cout << "\nEnter a element: ";
-			string element;
-			getline(cin, element);
-			s.push(element);
+			s.push();
 			break;
 			}
 		case '2':

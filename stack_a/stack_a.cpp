@@ -40,6 +40,9 @@ public :
 		if (empty()) {
 			cout << "\nStack is empty." << endl;
 		}
+		else {
+			for (int top = 0; top <= top;)
+		}
 	}
 
 };

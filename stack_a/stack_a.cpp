@@ -2,4 +2,4 @@
 #include <string>
 
 
-class
+class lmanvs

@@ -16,6 +16,13 @@ public :
 			cout << "Number of data execeeds the limit." << endl;
 			return "";
 		}
+		top++; //step 2
+		stack_array[top] = element;
+		cout << element << "ditambahkan(pushed)" << endl;
+
+		return element;
+	}
+	void pop() {
 
 	}
 

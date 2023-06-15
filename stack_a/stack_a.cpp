@@ -48,4 +48,44 @@ public :
 
 };
 
+int main() {
+	stackarray s;
+	while (true) {
+		cout << endl;
+		cout << "\n***stack menu ***\n";
+		cout << "1. Push\n";
+		cout << "2. Pop\n";
+		cout << "3. Display\n";
+		cout << "4. Exit\n";
+		cout << "\nEnter your choice: ";
+		string input;
+		getline(cin, input);
+		char ch = (input.empty() ? '0' : input[0]);
+		switch (ch) {
+		case '1': {
+			cout << "\nEnter a element: ";
+			string element;
+			getline(cin, element);
+			s.push(element);
+			break;
+			}
+		case '2':
+			if (s.empty()) {
+				cout << "\nStack is empty. " << endl;
+				break;
+			}
+			s.pop();
+			break;
+		case '3':
+			s.display();
+			break;
+		case '4':
+			return 0;
+		default :
+			cout << "\nInvalid choice" << endl;
+			break;
+		}
+	}
+}
+
 

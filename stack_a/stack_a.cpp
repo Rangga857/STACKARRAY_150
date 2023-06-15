@@ -41,7 +41,8 @@ public :
 			cout << "\nStack is empty." << endl;
 		}
 		else {
-			for (int top = 0; top <= top;)
+			for (int tmp = 0; tmp <= top; tmp++)
+				cout << stack_array[tmp] << endl;
 		}
 	}
 
